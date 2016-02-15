@@ -5,15 +5,14 @@
  *      Author: Subhash C Thakur
  */
 
-#ifndef UTILITIES_H_
-#define UTILITIES_H_
+#ifndef UTILS_H_
+#define UTILS_H_
 
-/*
- * Given a positive integer N, this function returns the longest consecutive
- * zeros between two ones in the binary representation of N. That is length of
- * maximal sequence of consecutive zeros with ones at both end.
- */
+void prime_factors(int n);
 
-int binary_gap(int N);
+void bubble_sort(int list[], int n);
 
-#endif /* UTILITIES_H_ */
+void merge_sort(int a[],int i,int j);
+void merge(int a[],int i1,int j1,int i2,int j2);
+
+#endif /* UTILS_H_ */
