@@ -10,6 +10,9 @@ struct Results solution(char *S, int P[], int Q[], int M) {
 		for (int sidx=0; sidx<slen; sidx++)
 			IMA[nidx][sidx] = -1;
 
+	// Pupulate IMA for A, C, G & T (first index 0, 1, 2 & 3 respectively) based
+	// on the occurences of A, C, G & T in the input string.
+
 	// For first element.
 	switch (S[0]) {
 	case 'A': IMA[0][0] = 0; break;
@@ -49,7 +52,7 @@ struct Results solution(char *S, int P[], int Q[], int M) {
 
 
 	AI = malloc(sizeof(int)*M);
-	// Initialize with maximum impact factor.
+	// Now just find if IMA for Q is greater than P.
 	for (int kidx=0; kidx<M; kidx++) {
 		if (IMA[0][Q[kidx]] >= P[kidx])
 			AI[kidx] = 1;
